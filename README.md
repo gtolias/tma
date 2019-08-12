@@ -43,7 +43,7 @@ All results of Table 2 in the paper are reproduced by running
 bash  run_exp_tab2.sh
 ```
 
-All results of Table 1 in the paper are reproduced by running
+All results of Figure 5 in the paper are reproduced by running
 
 ```
 bash  run_exp_fig5.sh
