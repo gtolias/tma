@@ -5,7 +5,7 @@ This is a Python package that uses Pytorch to implement our paper:
 ```
   @conference{TRC19,
    title = {Targeted Mismatch Adversarial Attack: Query with a Flower to Retrieve the Tower},
-   author = {Tolias, G. and Radenovi{\'c}, F. and Chum, O.}
+   author = {Tolias, Giorgos and Radenovi{\'c}, Filip and Chum, Ondrej}
    booktitle = {International Conference on Computer Vision (ICCV)},
    year = {2019}
   }
