@@ -20,7 +20,7 @@ from utils import img_loader
 
 
 datasets_names = ['roxford5k', 'rparis6k']
-datasets_names = ['roxford5k', 'rparis6k', 'holidays', 'copydays']
+# datasets_names = ['roxford5k', 'rparis6k', 'holidays', 'copydays'] # holidays and copydays are not yet supported
 
 parser = argparse.ArgumentParser(description='PyTorch CNN Image Retrieval Testing')
 

@@ -15,7 +15,8 @@ from utils import img_loader, center_crop
 
 # cmd arguments
 parser = argparse.ArgumentParser()
-parser.add_argument('--dataset', type=str, default="roxford5k", help = 'roxford5k | rparis6k | holidays | copydays')
+# parser.add_argument('--dataset', type=str, default="roxford5k", help = 'roxford5k | rparis6k | holidays | copydays') # holidays and copydays are not yet supported
+parser.add_argument('--dataset', type=str, default="roxford5k", help = 'roxford5k | rparis6k')
 parser.add_argument('--carrier', type=str, default="flower", help = ' flower | sanjuan')
 parser.add_argument('--mode', type=str, default="global", help = "global | tensor | hist")
 parser.add_argument('--modellist', type=str, default="alexnet-mac")
@@ -61,7 +62,7 @@ cfg = configdataset(dataset, datasets_folder)
 if dataset.startswith('holidays') or dataset.startswith('copydays'): cfg['nq'] = 50                                  # hard code holidays and copydays queries to first 50
 if 'bbx' in cfg['gnd'][0].keys(): bbxs = [tuple(cfg['gnd'][i]['bbx']) for i in range(cfg['nq'])]                     # bounding boxes for roxford5k and rparis6k datasets
 else: bbxs = None  
-im_size = {'roxford5k':1024, 'rparis6k':1024, 'holidaysmanrot1024':1024, 'copydays':1024}                            # original image size
+im_size = {'roxford5k':1024, 'rparis6k':1024, 'holidays':1024, 'copydays':1024}                            # original image size
 scale_factors = [x / im_size[dataset] for x in train_scales]                                                         # compute relative re-scaling factors
 
 # log file
